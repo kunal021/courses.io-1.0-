@@ -3,7 +3,7 @@ import course from "../data.json";
 function Courses() {
   const courses = course.courses;
   return (
-    <div className="flex flex-col">
+    <div className="container flex flex-col">
       <p className="mt-10 text-3xl font-black text-center">All Courses</p>
       <div className="flex flex-wrap justify-between items-center h-full w-full">
         {courses.map((item) => (
