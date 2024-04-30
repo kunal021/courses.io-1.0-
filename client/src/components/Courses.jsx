@@ -5,11 +5,11 @@ function Courses() {
   return (
     <div className="container flex flex-col">
       <p className="mt-10 text-3xl font-black text-center">All Courses</p>
-      <div className="flex flex-wrap justify-between items-center h-full w-full">
+      <div className="flex flex-wrap justify-center md:justify-between items-center h-full w-full">
         {courses.map((item) => (
           <div
             key={item.id}
-            className="border-2  rounded-xl border-gray-900 mx-3 md:mx-6 my-14 hover:shadow-xl transition-all duration-300"
+            className="border-2 rounded-xl border-gray-900 mx-3 md:mx-6 my-14 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex flex-col items-center">
               <iframe
@@ -18,9 +18,9 @@ function Courses() {
                 frameBorder={item.frameBorder}
                 allow={item.allow}
                 allowFullScreen={item.allowfullscreen}
-                className="rounded-t-2xl h-[220px] w-[350px]"
+                className="rounded-t-2xl h-48 w-80 md:h-[220px] md:w-[350px]"
               ></iframe>
-              <p className="m-4 text-xl font-black text-center w-80 break-words">
+              <p className="m-4 text-xl font-black text-center w-72 md:w-80 break-words">
                 {item.courseName}
               </p>
             </div>
