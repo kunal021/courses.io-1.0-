@@ -18,9 +18,7 @@ function Courses() {
                 frameBorder={item.frameBorder}
                 allow={item.allow}
                 allowFullScreen={item.allowfullscreen}
-                height={220}
-                width={350}
-                className="rounded-t-2xl"
+                className="rounded-t-2xl h-[220px] w-[350px]"
               ></iframe>
               <p className="m-4 text-xl font-black text-center w-80 break-words">
                 {item.courseName}
