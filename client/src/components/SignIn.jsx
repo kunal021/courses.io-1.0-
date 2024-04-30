@@ -46,7 +46,7 @@ function SignIn() {
               type="email"
               onChange={(e) => setUsername(e.target.value)}
               placeholder="johndoe@email.com"
-              className="p-2 mt-1 rounded-sm border-1"
+              className="p-2 mt-1 rounded-lg border-1"
             />
           </p>
           <p className="flex flex-col w-full py-1 pb-0 text-sm font-semibold">
@@ -55,10 +55,10 @@ function SignIn() {
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               placeholder="123456"
-              className="p-2 mt-1 rounded-sm border-1"
+              className="p-2 mt-1 rounded-lg border-1"
             />
           </p>
-          <button className="flex justify-center items-center w-full p-1 mt-2 rounded-lg border-1 border-transparent bg-black hover:bg-gray-900 text-white text-sm font-semibold">
+          <button className="flex justify-center items-center w-full p-2 mt-2 rounded-lg border-1 border-transparent bg-black hover:bg-gray-900 text-white text-sm font-semibold">
             Sign In
           </button>
         </form>
