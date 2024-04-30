@@ -15,7 +15,7 @@ function SignUp() {
 
   const handleSumbit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("localhost:3500/api/v1/users/signup", {
+    const res = await axios.post("http://localhost:3500/api/v1/users/signup", {
       firstName,
       lastName,
       username,
