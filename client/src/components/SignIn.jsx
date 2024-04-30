@@ -30,7 +30,7 @@ function SignIn() {
   }
 
   return (
-    <div className="flex justify-center items-center h-[100vh] w-[100vw] bg-black/30 overflow-x-hidden">
+    <div className="flex justify-center items-center h-[100vh] w-[100vw] overflow-x-hidden">
       <div className="flex flex-col justify-center items-center w-[50vh] rounded-lg border-transparent bg-white">
         <h1 className="text-2xl font-black py-2 px-4">Sign In</h1>
         <p className="text-sm font-semibold text-gray-500 text-center py-2 px-4">

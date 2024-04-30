@@ -18,7 +18,7 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <div className="bg-black/30 h-full w-full top-0 sticky">
+        <div className="bg-black/20 h-full w-full top-0 sticky">
           <NavBar />
         </div>
         <Routes>
