@@ -10,6 +10,7 @@ import Courses from "./components/Courses";
 import DataStructures from "./components/learning-path/DataStructures";
 import WebDevelopement from "./components/learning-path/WebDevelopement";
 import MachineLearning from "./components/learning-path/MachineLearning";
+import Home from "./components/Home";
 // import Home from "./components/Home";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<Test />} /> */}
+          <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
           <Route path="/data-structure" element={<DataStructures />} />
           <Route path="/web-developement" element={<WebDevelopement />} />
