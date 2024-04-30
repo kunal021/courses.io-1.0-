@@ -19,7 +19,7 @@ function Courses() {
                 allow={item.allow}
                 allowFullScreen={item.allowfullscreen}
                 height={220}
-                width={380}
+                width={350}
                 className="rounded-t-xl"
               ></iframe>
               <p className="m-4 text-xl font-black text-center w-80 break-words">
