@@ -10,7 +10,7 @@ function DataStructures() {
         {DSCourse.map((item) => (
           <div
             key={item.id}
-            className="border-2 rounded-xl border-gray-900 mx-3 lg:mx-6 my-14 hover:shadow-xl transition-all duration-300"
+            className="border-2 rounded-[20px] border-gray-900 mx-3 lg:mx-6 my-14 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex flex-col items-center">
               <iframe
