@@ -17,7 +17,7 @@ function NavBar() {
             to={"/"}
             className="cursor-pointer text-black font-black text-xl"
           >
-            Courses
+            Courses.io
           </Link>
         </div>
         <ul className="flex justify-center items-center space-x-6">
