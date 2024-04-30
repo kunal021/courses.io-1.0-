@@ -16,7 +16,7 @@ function SignIn() {
       username,
       password,
     });
-
+    localStorage.setItem("isAuthenticated", "true");
     localStorage.setItem("signedin", res.data.data);
     localStorage.setItem("usertoken", res.data.token);
     login();
