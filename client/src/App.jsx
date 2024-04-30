@@ -11,12 +11,13 @@ import DataStructures from "./components/learning-path/DataStructures";
 import WebDevelopement from "./components/learning-path/WebDevelopement";
 import MachineLearning from "./components/learning-path/MachineLearning";
 import Home from "./components/Home";
-// import Home from "./components/Home";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
