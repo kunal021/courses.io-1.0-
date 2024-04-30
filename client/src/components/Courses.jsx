@@ -9,7 +9,7 @@ function Courses() {
         {courses.map((item) => (
           <div
             key={item.id}
-            className="border-2 rounded-xl border-gray-400 mx-6 my-14"
+            className="border-2  rounded-xl border-gray-900 mx-6 my-14 hover:shadow-lg"
           >
             <div className="flex flex-col items-center">
               <iframe
