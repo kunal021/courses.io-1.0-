@@ -1,8 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { useAuth } from "../AuthContext";
 import SignOut from "./SignOut";
 
 function NavBar() {
-  const isAuthenticated = localStorage.getItem("isAuthenticated");
+  const { isAuthenticated } = useAuth();
   console.log(isAuthenticated);
   return (
     <div className="flex justify-between items-center p-2 px-10">

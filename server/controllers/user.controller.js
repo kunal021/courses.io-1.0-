@@ -58,7 +58,7 @@ exports.signin = async (req, res) => {
 
   if (!success) {
     return res.status(411).json({
-      message: "Error while loggin in",
+      message: "Email or Password Incorrect",
     });
   }
 
@@ -85,7 +85,7 @@ exports.signin = async (req, res) => {
   }
 
   return res.status(411).json({
-    message: "Error while logging in",
+    message: "Email or Password Incorrect",
   });
 };
 const updateBody = zod.object({

@@ -8,27 +8,40 @@ function SignUp() {
   const [lastName, setLastName] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const [success, setSuccess] = useState(true);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
   const { login, isAuthenticated } = useAuth();
 
   // const navigate = useNavigate();
 
   const handleSumbit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3500/api/v1/users/signup", {
-      firstName,
-      lastName,
-      username,
-      password,
-    });
-    localStorage.setItem("isAuthenticated", "true");
-    localStorage.setItem("signedin", res.data.data);
-    localStorage.setItem("usertoken", res.data.token);
-    login();
+    try {
+      setLoading(true);
+      const res = await axios.post(
+        "http://localhost:3500/api/v1/users/signup",
+        {
+          firstName,
+          lastName,
+          username,
+          password,
+        }
+      );
+      // localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("signedin", res.data.data);
+      localStorage.setItem("usertoken", res.data.token);
+      login();
+      setLoading(false);
+    } catch (error) {
+      setSuccess(false);
+      setError(error.response.data.message);
+      setLoading(false);
+    }
   };
 
   if (isAuthenticated) {
-    return <Navigate to="/courses" replace />;
+    <Navigate to="/courses" replace />;
   }
 
   return (
@@ -79,7 +92,7 @@ function SignUp() {
             />
           </p>
           <button className="flex justify-center items-center w-full p-2 mt-2 rounded-lg border-1 border-transparent bg-black hover:bg-gray-900 text-white text-sm font-semibold">
-            Sign Up
+            {loading ? "loading..." : "Sign Up"}
           </button>
         </form>
         <div className="text-sm font-semibold text-gray-900 text-center py-1 px-3">
@@ -87,6 +100,9 @@ function SignUp() {
           <Link to="/signin" className="underline">
             Sign In
           </Link>
+        </div>
+        <div className="text-sm font-semibold text-red-500 text-center py-1 px-3">
+          {!success && error}
         </div>
       </div>
     </div>

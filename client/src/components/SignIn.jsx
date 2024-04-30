@@ -7,19 +7,35 @@ import { useAuth } from "../AuthContext";
 function SignIn() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [success, setSuccess] = useState(true);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const { login, isAuthenticated } = useAuth();
 
   const handleSumbit = async (e) => {
     e.preventDefault();
-    const res = await axios.post("http://localhost:3500/api/v1/users/signin", {
-      username,
-      password,
-    });
-    localStorage.setItem("isAuthenticated", "true");
-    localStorage.setItem("signedin", res.data.data);
-    localStorage.setItem("usertoken", res.data.token);
-    login();
+    try {
+      setLoading(true);
+      const res = await axios.post(
+        "http://localhost:3500/api/v1/users/signin",
+        {
+          username,
+          password,
+        }
+      );
+      // console.log(res);
+      // localStorage.setItem("isAuthenticated", "true");
+      localStorage.setItem("signedin", res.data.data);
+      localStorage.setItem("usertoken", res.data.token);
+      login();
+      setLoading(false);
+    } catch (error) {
+      setSuccess(false);
+      setError(error.response.data.message);
+      setLoading(false);
+      // console.log(error.response);
+    }
   };
 
   if (isAuthenticated) {
@@ -56,7 +72,7 @@ function SignIn() {
             />
           </p>
           <button className="flex justify-center items-center w-full p-2 mt-2 rounded-lg border-1 border-transparent bg-black hover:bg-gray-900 text-white text-sm font-semibold">
-            Sign In
+            {loading ? "loading..." : "Sign In"}
           </button>
         </form>
         <div className="text-sm font-semibold text-gray-900 text-center py-1 px-3">
@@ -64,6 +80,9 @@ function SignIn() {
           <Link to="/signup" className="underline">
             Sign Up
           </Link>
+        </div>
+        <div className="text-sm font-semibold text-red-500 text-center py-1 px-3">
+          {!success && error}
         </div>
       </div>
     </div>
