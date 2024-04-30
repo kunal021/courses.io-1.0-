@@ -23,11 +23,22 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="learning-path" element={<LearningPath />} />
-          <Route path="/data-structure" element={<DataStructures />} />
-          <Route path="/web-developement" element={<WebDevelopement />} />
-          <Route path="/machine-learning" element={<MachineLearning />} />
+          <Route element={<PrivateRoute />}>
+            <Route path="/courses" element={<Courses />} />
+          </Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="learning-path" element={<LearningPath />} />
+          </Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/data-structure" element={<DataStructures />} />
+          </Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/web-developement" element={<WebDevelopement />} />
+          </Route>
+          <Route element={<PrivateRoute />}>
+            <Route path="/machine-learning" element={<MachineLearning />} />
+          </Route>
+
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/dashboard" element={<PrivateRoute />}>
