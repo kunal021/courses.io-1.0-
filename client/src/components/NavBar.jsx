@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
-    <div className="flex justify-between items-center m-6 mx-10">
+    <div className="flex justify-between items-center m-6 mx-10 bg-black/30">
       <div>
         <p className="cursor-pointer">Courses.io</p>
       </div>
