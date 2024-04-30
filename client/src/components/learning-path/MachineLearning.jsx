@@ -10,7 +10,7 @@ function MachineLearning() {
         {MLCourse.map((item) => (
           <div
             key={item.id}
-            className="border-2  rounded-xl border-gray-900 mx-6 my-14 hover:shadow-xl transition-all duration-300"
+            className="border-2 rounded-xl border-gray-900 mx-3 lg:mx-6 my-14 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex flex-col items-center">
               <iframe
@@ -19,11 +19,9 @@ function MachineLearning() {
                 frameBorder={item.frameBorder}
                 allow={item.allow}
                 allowFullScreen={item.allowfullscreen}
-                height={220}
-                width={350}
-                className="rounded-t-2xl"
+                className="rounded-t-2xl h-48 w-80 lg:h-[220px] lg:w-[350px]"
               ></iframe>
-              <p className="m-4 text-xl font-black text-center w-80 break-words">
+              <p className="m-4 text-xl font-black text-center w-72 lg:w-80 break-words">
                 {item.courseName}
               </p>
             </div>
