@@ -6,7 +6,7 @@ function DataStructures() {
   return (
     <div className="container flex flex-col">
       <p className="mt-10 text-3xl font-black text-center">Data Structures</p>
-      <div className="flex flex-wrap justify-between items-center h-full w-full">
+      <div className="flex flex-wrap justify-center items-center h-full w-full">
         {DSCourse.map((item) => (
           <div
             key={item.id}
@@ -21,7 +21,7 @@ function DataStructures() {
                 allowFullScreen={item.allowfullscreen}
                 className="rounded-t-2xl h-48 w-80 lg:h-[220px] lg:w-[350px]"
               ></iframe>
-              <p className="m-4 text-xl font-black text-center w-72 lg:w-80 break-words">
+              <p className="m-2 text-xl font-black text-center w-72 lg:w-80 break-words">
                 {item.courseName}
               </p>
             </div>

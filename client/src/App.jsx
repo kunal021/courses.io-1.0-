@@ -12,17 +12,19 @@ import WebDevelopement from "./components/learning-path/WebDevelopement";
 import MachineLearning from "./components/learning-path/MachineLearning";
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
+import LearningPath from "./components/learning-path/LearningPath";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <div className="bg-black/30 h-full w-full">
+        <div className="bg-black/30 h-full w-full top-0 sticky">
           <NavBar />
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="learning-path" element={<LearningPath />} />
           <Route path="/data-structure" element={<DataStructures />} />
           <Route path="/web-developement" element={<WebDevelopement />} />
           <Route path="/machine-learning" element={<MachineLearning />} />
