@@ -1,8 +1,11 @@
 import { NavLink } from "react-router-dom";
+import SignOut from "./SignOut";
 
 function NavBar() {
+  const isAuthenticated = localStorage.getItem("isAuthenticated");
+  console.log(isAuthenticated);
   return (
-    <div className="flex justify-between items-center p-6 px-10">
+    <div className="flex justify-between items-center p-2 px-10">
       <div>
         <p className="cursor-pointer">Courses.io</p>
       </div>
@@ -37,16 +40,18 @@ function NavBar() {
             Learning Path
           </NavLink>
         </li>
-        <li>
-          <NavLink
-            to={"/signup"}
-            className={({ isActive }) =>
-              `${isActive ? "text-red-500" : "text-black"}`
-            }
-          >
-            Sign Up
-          </NavLink>
-        </li>
+        {!isAuthenticated ? (
+          <li>
+            <NavLink
+              to={"/signup"}
+              className="flex justify-center items-center p-2 rounded-lg border-2 border-blue-500 hover:bg-blue-500 text-blue-500 hover:text-white text-base font-bold transition-all duration-300"
+            >
+              Sign Up
+            </NavLink>
+          </li>
+        ) : (
+          <SignOut />
+        )}
       </ul>
     </div>
   );

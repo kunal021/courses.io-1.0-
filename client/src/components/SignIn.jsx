@@ -12,21 +12,18 @@ function SignIn() {
 
   const handleSumbit = async (e) => {
     e.preventDefault();
-    const res = await axios.post(
-      "https://paaytm.onrender.com/api/v1/users/signin",
-      {
-        username,
-        password,
-      }
-    );
+    const res = await axios.post("http://localhost:3500/api/v1/users/signin", {
+      username,
+      password,
+    });
 
     localStorage.setItem("signedin", res.data.data);
-    localStorage.setItem("paytmtoken", res.data.token);
+    localStorage.setItem("usertoken", res.data.token);
     login();
   };
 
   if (isAuthenticated) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/courses" replace />;
   }
 
   return (

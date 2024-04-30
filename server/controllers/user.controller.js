@@ -1,6 +1,5 @@
 const zod = require("zod");
 const User = require("../model/user.model");
-const Account = require("../model/account.model");
 const jwt = require("jsonwebtoken");
 const JWT_SECRET = process.env.JWT_SECRET;
 

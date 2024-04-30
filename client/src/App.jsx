@@ -1,11 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./components/SignUp";
 import SignIn from "./components/SignIn";
-// import DashBoard from "./components/DashBoard";
-// import TransferMoney from "./components/TransferMoney";
 import { AuthProvider } from "./AuthContext";
 import PrivateRoute from "./components/PrivateRoute";
-// import Test from "./Test";
 import Courses from "./components/Courses";
 import DataStructures from "./components/learning-path/DataStructures";
 import WebDevelopement from "./components/learning-path/WebDevelopement";
@@ -18,7 +15,7 @@ function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
-        <div className="bg-black/20 h-full w-full top-0 sticky">
+        <div className="bg-white/20 h-full w-full top-0 sticky">
           <NavBar />
         </div>
         <Routes>
@@ -38,15 +35,8 @@ function App() {
           <Route element={<PrivateRoute />}>
             <Route path="/machine-learning" element={<MachineLearning />} />
           </Route>
-
           <Route path="/signup" element={<SignUp />} />
           <Route path="/signin" element={<SignIn />} />
-          <Route path="/dashboard" element={<PrivateRoute />}>
-            {/* <Route path="/dashboard" element={<DashBoard />} /> */}
-          </Route>
-          <Route path="/send" element={<PrivateRoute />}>
-            {/* <Route path="/send" element={<TransferMoney />} /> */}
-          </Route>
         </Routes>
       </BrowserRouter>
     </AuthProvider>

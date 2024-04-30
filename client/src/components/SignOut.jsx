@@ -4,12 +4,12 @@ import { useAuth } from "../AuthContext";
 function SignOut() {
   const { logout, isAuthenticated } = useAuth();
   const handleLogOut = () => {
-    localStorage.removeItem("paytmtoken");
+    localStorage.removeItem("usertoken");
     localStorage.removeItem("signedin");
     logout();
   };
   if (!isAuthenticated) {
-    return <Navigate to="/signin" replace />;
+    return <Navigate to="/" replace />;
   }
   return (
     <div>
