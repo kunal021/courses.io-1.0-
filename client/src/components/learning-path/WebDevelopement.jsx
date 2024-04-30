@@ -4,7 +4,7 @@ function WebDevelopement() {
   const courses = course.courses;
   const WDCourse = courses.filter((item) => item.learningPath === 2);
   return (
-    <div className="container flex flex-col">
+    <div className="flex flex-col">
       <p className="mt-10 text-3xl font-black text-center">Web Developement</p>
       <div className="flex flex-wrap justify-center items-center h-full w-full">
         {WDCourse.map((item) => (

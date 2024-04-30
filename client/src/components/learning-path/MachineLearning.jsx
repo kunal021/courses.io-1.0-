@@ -4,7 +4,7 @@ function MachineLearning() {
   const courses = course.courses;
   const MLCourse = courses.filter((item) => item.learningPath === 3);
   return (
-    <div className="container flex flex-col">
+    <div className="flex flex-col">
       <p className="mt-10 text-3xl font-black text-center">Machine Learning</p>
       <div className="flex flex-wrap justify-center items-center h-full w-full">
         {MLCourse.map((item) => (
