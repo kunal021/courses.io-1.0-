@@ -45,7 +45,7 @@ function SignUp() {
   }
 
   return (
-    <div className="flex justify-center items-center mt-10 w-[100vw]">
+    <div className="flex justify-center items-center m-10">
       <div className="flex flex-col justify-center items-center rounded-lg border-transparent bg-gray-200">
         <h1 className="text-xl font-black py-1 px-3">Sign Up</h1>
         <p className="text-sm font-semibold text-gray-500 text-center py-1 px-3">
