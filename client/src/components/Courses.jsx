@@ -9,7 +9,7 @@ function Courses() {
         {courses.map((item) => (
           <div
             key={item.id}
-            className="border-2  rounded-xl border-gray-900 mx-6 my-14 hover:shadow-lg"
+            className="border-2  rounded-xl border-gray-900 mx-6 my-14 hover:shadow-xl transition-all duration-300"
           >
             <div className="flex flex-col items-center">
               <iframe
@@ -20,7 +20,7 @@ function Courses() {
                 allowFullScreen={item.allowfullscreen}
                 height={220}
                 width={350}
-                className="rounded-t-xl"
+                className="rounded-t-2xl"
               ></iframe>
               <p className="m-4 text-xl font-black text-center w-80 break-words">
                 {item.courseName}
