@@ -15,7 +15,9 @@ function NavBar() {
           <NavLink
             to={"/"}
             className={({ isActive }) =>
-              `${isActive ? "text-red-500" : "text-black"}`
+              `${
+                isActive ? "text-gray-500 font-black" : "text-black font-black"
+              }`
             }
           >
             Home
@@ -25,7 +27,9 @@ function NavBar() {
           <NavLink
             to={"/courses"}
             className={({ isActive }) =>
-              `${isActive ? "text-red-500" : "text-black"}`
+              `${
+                isActive ? "text-gray-500 font-black" : "text-black font-black"
+              }`
             }
           >
             Courses
@@ -35,7 +39,9 @@ function NavBar() {
           <NavLink
             to={"/learning-path"}
             className={({ isActive }) =>
-              `${isActive ? "text-red-500" : "text-black"}`
+              `${
+                isActive ? "text-gray-500 font-black" : "text-black font-black"
+              }`
             }
           >
             Learning Path
