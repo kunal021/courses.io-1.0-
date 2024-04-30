@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import SignOut from "./SignOut";
 
@@ -8,7 +8,9 @@ function NavBar() {
   return (
     <div className="flex justify-between items-center p-2 px-10">
       <div>
-        <p className="cursor-pointer">Courses.io</p>
+        <Link to={"/"} className="cursor-pointer text-black font-black text-xl">
+          Courses.io
+        </Link>
       </div>
       <ul className="flex justify-center items-center space-x-6">
         <li>
