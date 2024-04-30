@@ -5,7 +5,7 @@ function Courses() {
   return (
     <div className="container flex flex-col">
       <p className="mt-10 text-3xl font-black text-center">All Courses</p>
-      <div className="flex flex-wrap justify-center lg:justify-between items-center h-full w-full">
+      <div className="flex flex-wrap justify-between items-center h-full w-full">
         {courses.map((item) => (
           <div
             key={item.id}
